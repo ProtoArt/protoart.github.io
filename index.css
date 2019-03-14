@@ -1,0 +1,168 @@
+/* This CSS should all be rewritten when we try to make a new website. */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  color: #212121;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:visited {
+  color: #2196f3;
+}
+
+a:hover {
+  color: #90caf9;
+}
+
+header {
+  background: #3f51b5;
+  color: #fff;
+}
+
+header a,
+header a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+header main {
+  align-items: center;
+  padding: 15px;
+}
+
+header main :first-child {
+  flex-grow: 1;
+}
+
+header .site-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+header .tagline {
+  margin: 0;
+  text-align: center;
+}
+
+header nav {
+  margin-top: 10px;
+  text-align: center;
+}
+
+article,
+.signup-form {
+  padding: 30px;
+}
+
+article {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+article p:first-child {
+  margin-top: 0;
+}
+
+article p:last-child {
+  margin-bottom: 0;
+}
+
+aside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "preview-a preview-b"
+    "preview-c preview-c"
+    "preview-d preview-d";
+}
+
+aside img {
+  width: 100%;
+  height: auto;
+}
+
+aside .preview-a {
+  grid-area: preview-a;
+}
+
+aside .preview-b {
+  grid-area: preview-b;
+}
+
+aside .preview-c {
+  grid-area: preview-c;
+}
+
+aside .preview-d {
+  grid-area: preview-d;
+}
+
+.signup-form {
+  background: #e0e0e0;
+  margin-top: 20px;
+}
+
+.signup-form p:first-child {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 925px) {
+  header main {
+    display: flex;
+    margin: 0 auto;
+    max-width: 925px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  header .site-title,
+  header .tagline {
+    text-align: left;
+  }
+
+  header nav {
+    margin: 0;
+  }
+
+  article,
+  aside {
+    margin: 0 auto;
+    max-width: 725px;
+  }
+
+  aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "preview-a preview-b preview-c"
+      "preview-a preview-b preview-d"
+  }
+
+  aside img {
+    width: 100%;
+    height: auto;
+  }
+
+  .signup-form main {
+    margin: 0 auto;
+    max-width: 625px;
+  }
+}
